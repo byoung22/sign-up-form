@@ -1,0 +1,184 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 1px solid red;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(255, 242, 222);
+
+    font-family: "Helvetica", "Arial", sans-serif;
+}
+
+.container {
+    background-color: rgb(240, 223, 255);
+    border: solid 7px rgb(34, 34, 34);
+    border-radius: 35px;
+    box-shadow: 15px 15px white;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 1300px;
+    margin: 20vh;
+    height: 700px;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    flex: 1 1 300px;
+    background-color: rgb(226, 194, 255);
+    border-radius: 31px;
+}
+.left .title {
+    flex: initial;
+}
+
+.right {
+    flex: 1 1 700px;
+    min-height: 550px;
+}
+.form-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.form-row {
+    flex: 0 1 300px;
+    display: flex;
+    
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.form-row input[type='text'],
+.form-row input[type='email'],
+.form-row input[type='password'] {
+    background-color: #FFFFFF;
+    border: 1px solid #D6D9DC;
+    border-radius: 3px;
+    width: 100%;
+    padding: 7px;
+    font-size: 14px;
+}
+
+.form-row label {
+    margin-bottom: 10px;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+    body {
+        background-color: #F09A9D; /* Red */
+    }
+    .container {
+        margin: 3vh;
+        box-shadow: 5px 5px white;
+    }
+    .bubble-container{
+        font-size: 0;
+        visibility: hidden;
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    body {
+        background-color: #F5CF8E; /* Yellow */
+    }
+    .container {
+        margin: 10vh;
+        box-shadow: 10px 10px white;
+    }
+    .bubble-container{
+        font-size: 0;
+        visibility: hidden;
+    }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+    body {
+        background-color: #B2D6FF; /* Blue */
+    }
+    .bubble-container{
+        display: flex;
+        justify-content: center;
+    }
+    .bubble-container .bubble {
+        flex: 0 1 515px;
+        position: relative;
+        background-color: rgb(196, 234, 196);
+        border-radius: 10px;
+        padding: 14px;
+        margin: 30px;
+    }
+    .bubble-container .bubble2 {
+        position: absolute;
+        bottom: -15px;
+        left: 0px;
+        background-color: rgb(196, 234, 196);
+        border-radius: 10px;
+        padding: 5px;
+        width: 50px;
+    }
+    .bubble-container .bubble3 {
+        position: absolute;
+        bottom: -30px;
+        left: 0px;
+        background-color: rgb(196, 234, 196);
+        border-radius: 10px;
+        padding: 5px;
+        width: 20px;
+    }
+}
