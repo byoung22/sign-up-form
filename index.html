@@ -11,6 +11,7 @@
     <div class="container">
         <div class="left">
             <div class="title"><h1>Sign Up For RECEIPTS</h1></div>
+            <div id="logo"><img src="pictures/document_scanner_FILL0_wght400_GRAD0_opsz48.png" alt="Scanning receipts logo" height="75px"></div>
         </div>
         <div class="right">
             <div class="bubble-container">
@@ -20,37 +21,38 @@
                 </div>
             </div>
 
-            <form action="index.html" method="post">
+            <form action="" method="post">
                 <div class="form-container">
                     <p class="form-row">
-                        <label for="first-name">First Name</label>
-                        <input type="text" id="first-name">
+                        <label for="first-name">First Name<span aria-label="required">*</span></label>
+                        <input type="text" id="first-name" name="first-name" placeholder="John" >
                     </p>
                     <p class="form-row">
-                        <label for="last-name">Last Name</label>
-                        <input type="text" id="last-name">
+                        <label for="last-name">Last Name<span aria-label="required">*</span></label>
+                        <input type="text" id="last-name" name="last-name" placeholder="Smith">
                     </p>
                     <p class="form-row">
-                        <label for="email">Email</label>
-                        <input type="email" id="email">
+                        <label for="email">Email<span aria-label="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="name@email.com">
                     </p>
                     <p class="form-row">
                         <label for="phone">Phone Number</label>
-                        <input type="text" id="phone">
+                        <input type="text" id="phone" name="phone">
                     </p>
                     <p class="form-row">
-                        <label for="password">Password</label>
-                        <input type="password" id="password">
+                        <label for="password">Password<span aria-label="required">*</span></label>
+                        <input type="password" id="password" name="password"required>
                     </p>
                     <p class="form-row">
-                        <label for="password-confirm">Confirm Password</label>
-                        <input type="password" id="password-confirm">
+                        <label for="password-confirm">Confirm Password<span aria-label="required">*</span></label>
+                        <input type="password" id="password-confirm" name="password-confirm" required>
                     </p>
-                </div>
-                <div>
-                    
                 </div>
             </form>
+            <div class="form-row" id="button-container">
+                <button>Submit</button>
+                <p>Already have an account? <a href="">Log in</a></p>
+            </div>
         </div>
     </div>
 </body>
