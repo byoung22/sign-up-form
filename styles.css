@@ -41,7 +41,8 @@ table {
 	border-spacing: 0;
 }
 
-*{
+* {
+    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 body {
@@ -55,6 +56,7 @@ body {
 }
 
 .container {
+    position: relative;
     background-color: rgb(240, 223, 255);
     border: solid 7px rgb(34, 34, 34);
     border-radius: 35px;
@@ -65,6 +67,14 @@ body {
     flex: 0 1 1300px;
     margin: 20vh;
     height: 772px;
+}
+
+/*picture*/
+#coffee {
+    position: absolute;
+    height: 300px;
+    bottom: -134px;
+    right: 40px;
 }
 
 .left {
@@ -81,6 +91,7 @@ body {
 }
 .left .title {
     flex: initial;
+    font-size: 20px;
 }
 
 .right {
@@ -114,7 +125,7 @@ body {
     padding: 7px;
     font-size: 14px;
 }
-
+/*
 .form-row input[type='text']:invalid,
 .form-row input[type='email']:invalid,
 .form-row input[type='password']:invalid {
@@ -125,7 +136,7 @@ body {
     padding: 7px;
     font-size: 14px;
 }
-
+*/
 .form-row label {
     margin-bottom: 10px;
 }
@@ -151,18 +162,49 @@ body {
   
     border: none;
     border-radius: 8px;
+    box-shadow: 3px 3px black;
   
     padding: 10px 40px;
     cursor: pointer;
-  }
+}
   
-  .form-row button:hover {
+.form-row button:hover {
     background-color: #ff80d9;
-  }
+}
   
-  .form-row button:active {
+.form-row button:active {
     background-color: #df32ab;
-  }
+}
+
+.background-image, .background-shadow {
+    position: absolute;
+}
+
+.cloud {
+    height: 55px;
+    top: 5vh;
+    left: 3vw;
+}
+
+.cloud-shadow{
+    position: absolute;
+    height: 55px;
+    top: calc(5vh + 3px);
+    left: calc(3vw + 3px);
+}
+
+.heart {
+    height: 75px;
+    bottom: 5vh;
+    right: 3vw;
+}
+
+.heart-shadow{
+    position: absolute;
+    height: 75px;
+    bottom: calc(5vh - 3px);
+    right: calc(3vw - 3px);
+}
 
   /* Mobile Styles */
 @media only screen and (max-width: 400px) {
@@ -198,29 +240,32 @@ body {
         position: relative;
         background-color: rgb(196, 234, 196);
         border-radius: 10px;
+        border: 2px solid rgb(112, 223, 112);
         padding: 14px;
         margin: 30px;
     }
     .bubble-container .bubble2 {
         position: absolute;
-        bottom: -15px;
+        bottom: -20px;
         left: 0px;
         background-color: rgb(196, 234, 196);
+        border: 2px solid rgb(112, 223, 112);
         border-radius: 10px;
         padding: 5px;
         width: 50px;
     }
     .bubble-container .bubble3 {
         position: absolute;
-        bottom: -30px;
+        bottom: -37px;
         left: 0px;
         background-color: rgb(196, 234, 196);
+        border: 2px solid rgb(112, 223, 112);
         border-radius: 10px;
         padding: 5px;
         width: 20px;
     }
 }
-@media only screen and (max-width: 1029px) { 
+@media only screen and (max-width: 1018px) { 
     /* Take out pic when smaller screen */
     .left {
         flex-direction: row;
@@ -230,5 +275,8 @@ body {
         visibility: hidden;
         padding: 0;
         margin: 0;
+    }
+    #coffee {
+        visibility: hidden;
     }
 }

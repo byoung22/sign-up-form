@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Sign-up Form</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -21,19 +22,19 @@
                 </div>
             </div>
 
-            <form action="" method="post">
+            <form id="my-form" action="" method="post">
                 <div class="form-container">
                     <p class="form-row">
                         <label for="first-name">First Name<span aria-label="required">*</span></label>
-                        <input type="text" id="first-name" name="first-name" placeholder="John" >
+                        <input type="text" id="first-name" name="first-name" placeholder="John" required>
                     </p>
                     <p class="form-row">
                         <label for="last-name">Last Name<span aria-label="required">*</span></label>
-                        <input type="text" id="last-name" name="last-name" placeholder="Smith">
+                        <input type="text" id="last-name" name="last-name" placeholder="Smith" required>
                     </p>
                     <p class="form-row">
                         <label for="email">Email<span aria-label="required">*</span></label>
-                        <input type="email" id="email" name="email" placeholder="name@email.com">
+                        <input type="email" id="email" name="email" placeholder="name@email.com" required>
                     </p>
                     <p class="form-row">
                         <label for="phone">Phone Number</label>
@@ -44,16 +45,21 @@
                         <input type="password" id="password" name="password"required>
                     </p>
                     <p class="form-row">
-                        <label for="password-confirm">Confirm Password<span aria-label="required">*</span></label>
-                        <input type="password" id="password-confirm" name="password-confirm" required>
+                        <label for="passwordC">Confirm Password<span aria-label="required">*</span></label>
+                        <input type="password" id="passwordC" name="passwordC" required>
                     </p>
                 </div>
             </form>
             <div class="form-row" id="button-container">
-                <button>Submit</button>
+                <button type="submit" form="my-form">Submit</button>
                 <p>Already have an account? <a href="">Log in</a></p>
             </div>
         </div>
+        <img id="coffee" src = "pictures/coffee.svg" alt="Picture of friends getting coffee"/>
     </div>
+    <img src="pictures/cloudshadow.svg" class="background-shadow cloud-shadow">
+    <img src="pictures/cloud.svg" class="background-image cloud">
+    <img src="pictures/heartshadow.svg" class="background-shadow heart-shadow">
+    <img src="pictures/heart.svg" class="background-image heart">
 </body>
 </html>
